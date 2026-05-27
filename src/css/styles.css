@@ -9,6 +9,10 @@
     font-family: 'Poppins', sans-serif;
 }
 
+body {
+    background-color: var(--color-neutral-1);
+}
+
 #container {
     background-color: var(--color-neutral-1);
     background-size: contain;
@@ -49,11 +53,11 @@ a.btn {
     min-height: calc(100vh - 96px);
     padding-top: clamp(0px, 5vw, 32px);
 
-    .home-color {
-        width: clamp(300px, 50%, 400px);
-    }
+    position: relative;
+    overflow: hidden;
+}
 
-    .home-title {
+.home-title {
     color: var(--color-neutral-9);
     text-align: center;
     font-size: clamp(3rem, 5vw, 4.3rem);
@@ -63,16 +67,44 @@ a.btn {
     margin: 0 auto;
 }
 
-    .home-description {
-        color: var(--color-neutral-9);
-        text-align: center;
-        font-size: 1rem;
-        font-weight: 500;
-        max-width: 600px;
-    }
+.home-description {
+    color: var(--color-neutral-9);
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 500;
+    max-width: 600px;
+}
+
+#home::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background-image: url("../../imagens-chacara/por-do-sol.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    opacity: 0.15;
+
+    z-index: 0;
+}
+
+#home > * {
+    position: relative;
+    z-index: 1;
 }
 
 #galeria .galeria-title {
+    color: var(--color-neutral-9);
+    text-align: center;
+    font-size: clamp(3rem, 5vw, 4.3rem);
+    line-height: 1.2;
+    max-width: 700px;
+    margin: 0 auto;
+    }
+
+#galeria2 .galeria-title {
     color: var(--color-neutral-9);
     text-align: center;
     font-size: clamp(3rem, 5vw, 4.3rem);
@@ -104,7 +136,7 @@ a.btn {
     width: 25%;
     width: 8.333%;
     position: relative;
-    transition: 2s;
+    transition: 1s;
 }
 
 
@@ -184,6 +216,46 @@ a.btn {
     margin-left: -91.663%;
 }
 
+#radio13:checked ~ .first2 {
+    margin-left: 0%;
+}
+
+#radio14:checked ~ .first2 {
+    margin-left: -8.333%;
+}
+
+#radio15:checked ~ .first2 {
+    margin-left: -16.666%;
+}
+
+#radio16:checked ~ .first2 {
+    margin-left: -24.999%;
+}
+
+#radio17:checked ~ .first2 {
+    margin-left: -33.332%;
+}
+
+#radio18:checked ~ .first2 {
+    margin-left: -41.665%;
+}
+
+#radio19:checked ~ .first2 {
+    margin-left: -49.998%;
+}
+
+#radio20:checked ~ .first2 {
+    margin-left: -58.331%;
+}
+
+#radio21:checked ~ .first2 {
+    margin-left: -66.664%;
+}
+
+#radio22:checked ~ .first2 {
+    margin-left: -74.997%;
+}
+
 .navigation-auto div{
     border: 2px solid var(--color-primary-3);
     padding: 5px;
@@ -244,6 +316,41 @@ a.btn {
     background-color: var(--color-neutral-2);
 }
 
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    background-color: var(--color-primary-2);
+    color: white;
+
+    border: none;
+
+    width: 45px;
+    height: 45px;
+
+    border-radius: 50%;
+
+    cursor: pointer;
+
+    font-size: 24px;
+
+    z-index: 10;
+}
+
+.prev {
+    left: 15px;
+}
+
+.next {
+    right: 15px;
+}
+
+.prev:hover,
+.next:hover {
+    background-color: var(--color-primary-3);
+}
 .manual-navigation,
 .navigation-auto {
     display: flex;
@@ -257,6 +364,12 @@ a.btn {
 #galeria2 {
     padding-left: 16px;
     padding-right: 16px;
+}
+
+.emoji {
+    font-size: 40px;
+    display: block;
+    margin-bottom: 15px;
 }
 
 @media screen and (max-width: 768px){
@@ -284,8 +397,36 @@ a.btn {
 
      .facilidades .itens {
     flex-direction: column;
+    align-items: center;
     gap: 20px;
   }
+    
+    .item {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    h1 {
+        font-size: 42px;
+        line-height: 1.1;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .btn {
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+
+    .slider {
+        margin-top: 30px;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
 
 }
 
@@ -298,7 +439,7 @@ a.btn {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  gap: 40px;
+  gap: 30px;
   margin-top: 30px;
 }
 
