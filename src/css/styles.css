@@ -13,6 +13,10 @@ body {
     background-color: var(--color-neutral-1);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 #container {
     background-color: var(--color-neutral-1);
     background-size: contain;
@@ -46,6 +50,7 @@ a.btn {
 }
 
 #home {
+    animation: fade 1s ease;
     display: flex;
     flex-direction: column;
     gap: 12px;
