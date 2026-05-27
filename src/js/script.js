@@ -7,3 +7,19 @@ mobileBtn.addEventListener('click', () => {
     icon.classList.toggle('fa-times');
     icon.classList.toggle('fa-bars');
 })
+
+let count = 1;
+document.getElementById ("radio1"). checked = true;
+setInterval ( function(){
+    nextImage();
+}, 5000)
+
+function nextImage(){
+    count ++;
+    if (count>12){
+        count = 1;
+    }
+
+    document.getElementById ("radio"+count). checked = true;
+
+}
