@@ -1,4 +1,4 @@
-## PROJETO EM DESENVOLVIMENTO DE SISTEMAS
+## PROJETO DE EXTENSÃO EM CRIAÇÃO DE SITEMAS
 
 ## Integrante
 Leonildo Bispo dos Santos Junior
