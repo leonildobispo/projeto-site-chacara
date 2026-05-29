@@ -1,6 +1,6 @@
 ## PROJETO EM DESENVOLVIMENTO DE SISTEMAS
 
-## Integramte
+## Integrante
 Leonildo Bispo dos Santos Junior
 RA:426104672
 TURMA: 66 - VG
